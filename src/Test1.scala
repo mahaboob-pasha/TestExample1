@@ -5,11 +5,11 @@ class Test1(var a:Int,var b:Int, val ll:List[Int]) {
   def this(a:Int) = this(a,a,List(a))
   
   override def toString:String = {
-    "("+a+","+b+")"
+    "{"+a+","+b+"}"
   }
  
   def apply(inc:Int) : Test1 = {
-   println("Test1::apply, ideally this is static method in companion object\n")
+   println("Test1::apply, ideally this is static method in companion object, but we still can create this methos, it will be called on object(...)\n")
     a += inc
 println("Test1::apply")
     b += inc
